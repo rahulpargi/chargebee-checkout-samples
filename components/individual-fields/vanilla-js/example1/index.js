@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize Chargebee
     let cbInstance = Chargebee.init({
       site: 'mannar-test',
-      publishableKey: 'test___dev__Nhmc4vDO1z2KAecdmiG1eUsIH0Dot9phQ',
+      publishableKey: 'test___dev__7L5ZW25laF8SeJsxoy6vk6FpogmLrJw8',
       currencyCode: 'USD'
     });
 
