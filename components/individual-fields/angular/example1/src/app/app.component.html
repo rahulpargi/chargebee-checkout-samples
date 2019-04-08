@@ -1,0 +1,37 @@
+<div class="example1" id="example1" >
+  <div class="container">
+    <form>
+      <div id="name" class="field empty">
+          <label>Name</label>
+          <input type="text" placeholder="Your name here" />
+      </div>
+      <div cbCardField id='card-field' 
+        [fonts]="fonts"
+        [styles]="styles"
+        locale='en'
+        [classes]="classes"
+        [placeholder]="placeholder" (ready)="setFocus($event)"
+      >
+        <div id='card-number' cbNumberField class="field empty" placeholder="number override" 
+          (ready)="setFocus($event)"
+          (change)="onChange($event)"
+        >
+          <label>Card</label>
+        </div>
+        <div id='card-expiry' cbExpiryField class="field empty" placeholder="expiry override"
+          (change)="onChange($event)"
+        >
+          <label>Expiry</label>
+        </div>
+        <div id='card-cvv' cbCvvField class="field empty" placeholder="cvv override"
+          (change)="onChange($event)"
+        >
+          <label>CVV</label>
+        </div>
+      </div>
+      <div id="error">{{errorMessage.message}}</div>
+      <div id="error">{{token}}</div>
+      <button id='tokenize-button' cbTokenize style="margin-top: 20px;" class="submit-button" (submit)="onTokenize($event)">Pay 25$</button>
+    </form>
+  </div>
+</div>
